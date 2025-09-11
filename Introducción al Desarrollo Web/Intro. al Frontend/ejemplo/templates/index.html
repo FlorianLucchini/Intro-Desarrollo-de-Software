@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../static/styles.css">
-	<title>Pagina</title>
-</head>
-<body>
-	<h1>Hola {{ username }}</h1>
-	<p>Hola {{ mensaje }}</p>
-	<ul>
-		{% for el in lista %}
-			<li>{{ el }}</li>
-		{% endfor %}
-	</ul>
-	<ol>
-		{% for key, value in dict.items() %}
-			{% if key % 2 == 0 %}
-				<strong><li>{{ value }}</li></strong>
-			{% else %}
-				<li>{{ value }}</li>
-			{% endif %}
-		{% endfor %}
-	</ol>
-	{% if is_admin %}
-		<h3><strong>Sos admin</strong></h3>
-		<p>Podes tocar el boton: </p>
-		<button class="admBtn">Boton</button>
-	{% else %}
-		<p>No sos admin</p>
-	{% endif %}
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles/styles.css" />
+    <title>{{ title }}</title>
+    <link
+      rel="icon"
+      href="../static/images/Youthanasia.webp"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="header-container">
+        <h1 class="page-title">{{ title }}</h1>
+      </header>
+      <main>
+        <h2>Bienvenido a mi pagina web</h2>
+        <p>
+          Esta es una pagina de ejemplo creada para aprender desarrollo web.
+        </p>
+        <img src="../static/images/example.jpg" alt="Imagen de ejemplo" />
+        <p>
+          Explora los diferentes enlaces en el menu de navegacion para aprender
+          mas sobre mi y mis servicios.
+        </p>
+      </main>
+    </div>
+    <footer></footer>
+  </body>
 </html>
